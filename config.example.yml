@@ -1,0 +1,40 @@
+app:
+  name: IPV
+  host: 0.0.0.0
+  port: 5000
+  debug: false
+  secret_key: your-secret-key-here
+
+database:
+  host: localhost
+  port: 5432
+  name: ipv
+  user: postgres
+  password: your-password-here
+
+redis:
+  host: localhost
+  port: 6379
+  db: 0
+  password: your-redis-password-here
+
+jwt:
+  secret_key: your-jwt-secret-key-here
+  algorithm: HS256
+  access_token_expire_minutes: 30
+
+logging:
+  level: INFO
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  file: logs/ipv.log
+
+cors:
+  allowed_origins:
+    - http://localhost:3000
+    - http://localhost:5000
+  allowed_methods:
+    - GET
+    - POST
+    - PUT
+    - DELETE
+    - OPTIONS
